@@ -1,0 +1,38 @@
+/* Normalize: los navegadores tienen estilos por defecto que pueden variar según el navegador. Normalizar los estilos hace que el sitio se vea igual en todos los navegadores. */
+@import url('Base/normalize.css');
+/* Son valores reutilizables que podés definir una vez y luego usar en muchos lugares. Se definen con -- y se usan con var(). */
+@import url('Base/variables.css');
+/* Tipografías: Este archivo define cómo se ven los textos en general: títulos, párrafos, enlaces, etc. Lo separás para no mezclar con otros estilos visuales. */
+@import url('Base/typography.css');
+
+/* Footer: este archivo define el estilo del pie de página. */
+@import url("Components/footer.css");
+/* Header: este archivo define el estilo del encabezado. */
+@import url("Components/header.css");
+
+/* Importo los estilos de las páginas. */
+@import url("Pages/index.css");
+@import url("Pages/galery.css");
+@import url("Pages/services.css");
+@import url("Pages/contact.css");
+
+/* Media querys: Estilos que se aplican en ciertas condiciones. */
+@import url("Media/mobile.css");
+@import url("Media/tablet.css");
+@import url("Media/desktop.css");
+
+/*
+    Media querys:
+    Estilos que se aplican en ciertas condiciones. 
+    Por ejemplo, si el ancho de la pantalla es menor a 768px, se aplica un estilo específico.
+    Moblie-first: se aplican los estilos para móviles primero y luego se van aplicando los estilos para pantallas más grandes.
+    Desktop-first: se aplican los estilos para pantallas grandes primero y luego se van aplicando los estilos para pantallas más pequeñas.
+
+    Propiedades que normalmente cambian en media queries
+    font-size
+    padding, margin
+    flex-direction, grid-template-columns
+    display (mostrar u ocultar algo)
+    width, height
+    text-align
+*/

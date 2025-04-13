@@ -1,0 +1,17 @@
+/* Variables Globales son variables que se pueden usar en todo el documento. */
+/* :root {
+    esta variable se aplica a todo el documento.
+    --color-primario: #3498db;
+    --color-secundario: #2ecc71;
+    --fuente-principal: 'Roboto', sans-serif;
+    --espaciado-base: 1rem;
+} */
+/* Variables Locales son los estilos que se aplican a un elemento específico. */
+/* .card {
+    esta variable solo se puede aplicar a la clase card.
+    -- color-primario: #3498db;
+    --color-secundario: #2ecc71;
+    --fuente-principal: 'Roboto', sans-serif;
+    --espaciado-base: 1rem;
+} */
+
