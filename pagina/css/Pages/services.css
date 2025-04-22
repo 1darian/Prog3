@@ -18,3 +18,130 @@
     }
     
 } */
+
+  .tittlecards {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a3c2f; /* Verde profundo */
+    text-align: center;
+    margin: 2rem 0 1rem;
+  }
+
+  .sub {
+    font-size: 1.2rem; /* Tamaño de fuente adecuado para subtítulos */
+    color: #555; /* Color gris suave para contraste */
+    text-align: center; /* Centrar el texto */
+    margin: 10px 0 20px; /* Espaciado superior e inferior */
+    line-height: 1.6; /* Mejorar la legibilidad */
+    font-style: italic; /* Opcional: estilo cursivo para diferenciarlo */
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+   
+    
+
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .parques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .card-button {
+    text-decoration: none;
+    background-color: #2ecc71;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .card-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .card-info {
+    font-weight: bold;
+    color: #2980b9;
+  
+  }
+  .toggle {
+      display: none; /* Oculta el checkbox */
+  }
+    
+  .more-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .more-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .more-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  
+  .toggle:checked ~ .more-info {
+    max-height: 200px; 
+    margin-top: 1rem;
+  }
+    
+;
+  
+  

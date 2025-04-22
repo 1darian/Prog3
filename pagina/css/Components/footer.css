@@ -94,6 +94,13 @@ footer {
     font-size: 0.9rem;
   }
   
+  /* Clase adicional para texto en el footer */
+  .letra {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #0c0b0b;
+  }
+  
   /* Responsive */
   @media (max-width: 768px) {
     .footer-content {

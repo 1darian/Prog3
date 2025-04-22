@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
 /* Normalize: los navegadores tienen estilos por defecto que pueden variar según el navegador. Normalizar los estilos hace que el sitio se vea igual en todos los navegadores. */
 @import url('Base/normalize.css');
 /* Son valores reutilizables que podés definir una vez y luego usar en muchos lugares. Se definen con -- y se usan con var(). */
@@ -101,3 +103,19 @@
   .mt-4 {
     margin-top: 2rem;
   }
+
+/*
+    Media querys:
+    Estilos que se aplican en ciertas condiciones. 
+    Por ejemplo, si el ancho de la pantalla es menor a 768px, se aplica un estilo específico.
+    Moblie-first: se aplican los estilos para móviles primero y luego se van aplicando los estilos para pantallas más grandes.
+    Desktop-first: se aplican los estilos para pantallas grandes primero y luego se van aplicando los estilos para pantallas más pequeñas.
+
+    Propiedades que normalmente cambian en media queries
+    font-size
+    padding, margin
+    flex-direction, grid-template-columns
+    display (mostrar u ocultar algo)
+    width, height
+    text-align
+*/
