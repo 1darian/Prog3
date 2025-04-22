@@ -21,18 +21,83 @@
 @import url("Media/tablet.css");
 @import url("Media/desktop.css");
 
-/*
-    Media querys:
-    Estilos que se aplican en ciertas condiciones. 
-    Por ejemplo, si el ancho de la pantalla es menor a 768px, se aplica un estilo específico.
-    Moblie-first: se aplican los estilos para móviles primero y luego se van aplicando los estilos para pantallas más grandes.
-    Desktop-first: se aplican los estilos para pantallas grandes primero y luego se van aplicando los estilos para pantallas más pequeñas.
-
-    Propiedades que normalmente cambian en media queries
-    font-size
-    padding, margin
-    flex-direction, grid-template-columns
-    display (mostrar u ocultar algo)
-    width, height
-    text-align
-*/
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6; /* Espaciado entre líneas */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  }
+  
+  img {
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animaciones aplicadas a elementos hero y section */
+  .hero, section {
+    animation: fadeIn 0.8s ease-out forwards; 
+  }
+  
+  /* Utilidades */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem; 
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Margenes */
+  .mb-1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .mb-2 {
+    margin-bottom: 1rem;
+  }
+  
+  .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 2rem;
+  }
+  
+  .mt-1 {
+    margin-top: 0.5rem;
+  }
+  
+  .mt-2 {
+    margin-top: 1rem;
+  }
+  
+  .mt-3 {
+    margin-top: 1.5rem;
+  }
+  
+  .mt-4 {
+    margin-top: 2rem;
+  }

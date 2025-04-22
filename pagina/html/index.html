@@ -3,46 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Argentina Salvaje</title>
-  <link rel="stylesheet" href="css/style.css" />
-
+  <title>Argentina Salvaje - Descubre la Naturaleza Argentina</title>
+  <meta name="description" content="Explora la belleza natural de Argentina, sus parques nacionales y su fauna única. Información, recursos y consejos para disfrutar de la naturaleza responsablemente.">
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
+    <div class="logo-container">
+      <h2>Argentina Salvaje</h2>
+    </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Servicios</a></li>
-        <li><a href="galery.html">Galería</a></li>
-        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="services.html"><i class="fas fa-map-marked-alt"></i> Servicios</a></li>
+        <li><a href="galery.html"><i class="fas fa-images"></i> Galería</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a></li>
       </ul>
     </nav>
   </header>
 
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Descubre la Argentina Salvaje</h1>
+      <p class="tagline">Biodiversidad, conservación y aventura en estado puro</p>
+      <a href="services.html" class="cta-button">Explorar Ahora</a>
+    </div>
+  </div>
+
   <main>
-    <h1>Bienvenido a Argentina Salvaje</h1>
-    <p>Descubre la belleza natural de Argentina a través de sus parques nacionales y su fauna única. Nuestra mision es preservar y proteger la biodiversidad de nuestro país, brindando información y recursos para disfrutar de la naturaleza de manera responsable.</p>
-    <p>En nuestro sitio encontrarás información sobre los parques nacionales, la fauna autóctona y consejos para disfrutar de la naturaleza de manera responsable. También podrás ver fotos de los animales que habitan en nuestros parques y aprender más sobre su hábitat y comportamiento.</p>
-    
-    <iframe 
-    src="https://drive.google.com/file/d/1phoI27TcWFft0X5Xo9kpQtiNdmTxRikz/preview" 
-    width="640" 
-    height="480" 
-    allow="autoplay"
-    allowfullscreen>
-    </iframe>
-  
+    <section class="intro">
+      <h2>Bienvenido a Argentina Salvaje</h2>
+      <p class="lead">Descubre la belleza natural de Argentina a través de sus parques nacionales y su fauna única. Nuestra misión es preservar y proteger la biodiversidad de nuestro país, brindando información y recursos para disfrutar de la naturaleza de manera responsable.</p>
+      <p>En nuestro sitio encontrarás información sobre los parques nacionales, la fauna autóctona y consejos para disfrutar de la naturaleza de manera responsable. También podrás ver fotos de los animales que habitan en nuestros parques y aprender más sobre su hábitat y comportamiento.</p>
+    </section>
 
-  
+    <section class="video-section">
+      <h2>Explora Nuestros Parques Nacionales</h2>
+      <div class="video-container">
+        <iframe 
+          src="https://drive.google.com/file/d/1phoI27TcWFft0X5Xo9kpQtiNdmTxRikz/preview" 
+          allow="autoplay"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
 
+    <section class="features">
+      <h2>Descubre Argentina</h2>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <i class="fas fa-mountain"></i>
+          <h3>Parques Nacionales</h3>
+          <p>Explora los 38 parques nacionales de Argentina, desde la selva misionera hasta los glaciares patagónicos.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-paw"></i>
+          <h3>Fauna Autóctona</h3>
+          <p>Conoce las especies emblemáticas como el yaguareté, el cóndor andino y el guanaco, entre muchas otras.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-hiking"></i>
+          <h3>Ecoturismo</h3>
+          <p>Descubre cómo disfrutar de la naturaleza de manera responsable y sostenible con nuestras guías.</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="highlights">
+      <h2>Destacados</h2>
+      <div class="highlight-grid">
+        <div class="highlight-item">
+          <img src="/placeholder.svg?height=300&width=400" alt="Parque Nacional Iguazú" class="highlight-img">
+          <div class="highlight-content">
+            <h3>Parque Nacional Iguazú</h3>
+            <p>Hogar de las majestuosas Cataratas del Iguazú y una biodiversidad increíble.</p>
+            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <img src="/placeholder.svg?height=300&width=400" alt="Parque Nacional Los Glaciares" class="highlight-img">
+          <div class="highlight-content">
+            <h3>Parque Nacional Los Glaciares</h3>
+            <p>Donde se encuentra el imponente Glaciar Perito Moreno, una maravilla natural.</p>
+            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>¿Listo para la aventura?</h2>
+        <p>Únete a nuestra comunidad y recibe información exclusiva sobre los parques nacionales y la fauna de Argentina.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Solutions</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Argentina Salvaje</h3>
+        <p>Descubriendo y protegiendo la naturaleza argentina desde 2020.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="galery.html">Galería</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Argentina Salvaje. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
