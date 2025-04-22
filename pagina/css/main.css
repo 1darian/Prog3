@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+
+
 /* Normalize: los navegadores tienen estilos por defecto que pueden variar según el navegador. Normalizar los estilos hace que el sitio se vea igual en todos los navegadores. */
 @import url('Base/normalize.css');
 /* Son valores reutilizables que podés definir una vez y luego usar en muchos lugares. Se definen con -- y se usan con var(). */
@@ -20,6 +24,9 @@
 @import url("Media/mobile.css");
 @import url("Media/tablet.css");
 @import url("Media/desktop.css");
+
+
+
 
 /*
     Media querys:
