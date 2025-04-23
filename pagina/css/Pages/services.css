@@ -1,25 +1,6 @@
-/* Estilos específicos para la página services. Mobile-First*/
 
 
-
-
-
-
-/* Media queries para otras pantallas */
-/* @media (max-width: 768px) {
-    .contact-form {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .contact-form {
-        width: 100%;
-    }
-    
-} */
-
-  .tittlecards {
+  .tituloprincipal {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 700;
@@ -76,17 +57,17 @@
     object-fit: cover;
   }
   
-  .card-content {
+  .card-contenido {
     padding: 1rem;
   }
   
-  .card-title {
+  .card-titulo {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
     color: #2c3e50;
   }
   
-  .card-description {
+  .descripcion {
     font-size: 1rem;
     color: #555;
     margin-bottom: 1rem;
@@ -115,7 +96,7 @@
       display: none; /* Oculta el checkbox */
   }
     
-  .more-btn {
+  .boton-mas {
     background-color: #3498db;
     color: white;
     border: none;
@@ -131,13 +112,13 @@
     background-color: #2980b9;
   }
   
-  .more-info {
+  .mas-info {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
   }
   
-  .toggle:checked ~ .more-info {
+  .toggle:checked ~ .mas-info {
     max-height: 200px; 
     margin-top: 1rem;
   }
