@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería - Naturaleza Argentina</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
+    <div class="logo-container">
+      <h2>Argentina Salvaje</h2>
+    </div>
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="services.html">Parques</a></li>
-        <li><a href="galery.html" class="active">Galería</a></li>
-        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="index.html"><i class="fas fa-home" ></i>Inicio</a></li>
+        <li><a href="services.html"><i class="fas fa-map-marked-alt"></i>Parques</a></li>
+        <li><a href="galery.html" class="active"><i class="fas fa-images"></i>Galería</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i>Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -21,28 +27,81 @@
   <main>
     <h1>Galería de Animales Argentinos</h1>
     <section class="galeria">
-      <img src="../img y videos/yaguarete.jpg" alt="Yaguareté">
-      <div>Yaguareté</div>
-      <img src="../img y videos/condor andino.jpg" alt="Cóndor Andino">
-      <div>Cóndor Andino</div>
-      <img src="../img y videos/puma.jpg" alt="Puma">
-      <div>Puma</div>
-      <img src="../img y videos/tucan.png" alt="Tucán">
-      <div>Tucan</div>
-      <img src="../img y videos/guanaco.png" alt="Guanaco">
-      <div>Guanaco</div>
-      <img src="../img y videos/mono caraya.png" alt="Mono Carayá">
-      <div>Mono Carayá</div>
-      <img src="../img y videos/zorro gris.png" alt="Zorro Gris">
-      <div>Zorro Gris</div>
+      <div class="galeria-imagen">
+        <img src="../img y videos/yaguarete.jpg" alt="Yaguareté">
+        <h3>Yaguareté <span>(Panthera onca)</span></h3>
+        <p>Es el felino más grande de América. Se lo puede encontrar en la selva misionera y está en peligro de extinción.</p>
+        <a href="https://es.wikipedia.org/wiki/Panthera_onca" target="_blank" class="mas-info">Más información <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="galeria-imagen">
+        <img src="../img y videos/condor andino.jpg" alt="Cóndor Andino">
+        <h3>Cóndor Andino <span>(Vultur gryphus)</span></h3>
+        <p>Es el ave voladora más grande del mundo. Vive en la cordillera de los Andes y también está en peligro de extinción.</p>
+        <a href="https://es.wikipedia.org/wiki/Vultur_gryphus" target="_blank" class="mas-info">Más información <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="galeria-imagen">
+        <img src="../img y videos/puma.jpg" alt="Puma">
+        <h3>Puma <span>(Puma concolor)</span></h3>
+        <p>Felino que se puede encontrar en casi cualquier parte de Argentina, pero muy raramente.</p>
+        <a href="https://es.wikipedia.org/wiki/Puma_concolor" target="_blank" class="mas-info">Más información <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="galeria-imagen">
+        <img src="../img y videos/tucan.png" alt="Tucán">
+        <h3>Tucán <span>(Ramphastidae)</span></h3>
+        <p>Ave presente principalmente en la selva misionera, conocida por su característico pico.</p>
+        <a href="https://es.wikipedia.org/wiki/Ramphastidae" target="_blank" class="mas-info">Más información <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="galeria-imagen">
+        <img src="../img y videos/guanaco.png" alt="Guanaco">
+        <h3>Guanaco <span>(Lama guanicoe)</span></h3>
+        <p>Camélido que se encuentra en la Patagonia Argentina. Su principal depredador es el puma.</p>
+        <a href="https://es.wikipedia.org/wiki/Lama_guanicoe" target="_blank" class="mas-info">Más información <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="galeria-imagen">
+        <img src="../img y videos/mono caraya.png" alt="Mono Carayá">
+        <h3>Mono Carayá <span>(Alouatta caraya)</span></h3>
+        <p>Tipo de primate que se puede encontrar en el noreste del país. Viven principalmente en bosques o selvas.</p>
+        <a href="https://es.wikipedia.org/wiki/Alouatta_caraya" target="_blank" class="mas-info">Más información <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="galeria-imagen">
+        <img src="../img y videos/zorro gris.png" alt="Zorro Gris">
+        <h3>Zorro Gris <span>(Lycalopex griseus)</span></h3>
+        <p>Tipo de zorro que vive a lo largo de toda la cordillera de los Andes. A diferencia de otros cánidos, estos son omnívoros.</p>
+        <a href="https://es.wikipedia.org/wiki/Lycalopex_griseus" target="_blank" class="mas-info">Más información <i class="fas fa-arrow-right"></i></a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Naturaleza Argentina</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Argentina Salvaje</h3>
+        <p>Descubriendo y protegiendo la naturaleza argentina desde 2020.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="galery.html">Galería</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="letra">© 2025 Argentina Salvaje. Todos los derechos reservados.</p>
+
     </div>
   </footer>
 </body>
