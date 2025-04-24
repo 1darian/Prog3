@@ -18,9 +18,6 @@
     }
     
 } */
-.main {
-    max-width: 1200px;
-}
 
 .galeria {
     display: flex;
@@ -57,7 +54,7 @@ h3 span {
     margin-top: 0px;
 }
 
-.mas-info {
+.mas-informacion {
     margin: 10px;
     color: #2e7d32;
     font-weight: 600;
@@ -65,16 +62,16 @@ h3 span {
     transition: color 0.3s ease;
 }
 
-.mas-info i {
+.mas-informacion i {
     margin-left: 0.5rem;
     transition: transform 0.3s ease;
 }
 
-.mas-info:hover {
+.mas-informacion:hover {
     color: #1b5e20;
 }
 
-.mas-info:hover i {
+.mas-informacion:hover i {
     transform: translateX(5px);
 }
 
