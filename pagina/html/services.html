@@ -5,24 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parques Nacionales - Naturaleza Argentina</title>
   <link rel="stylesheet" href="../css/main.css">
-  
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="services.html" class="active">Parques</a></li>
-        <li><a href="galery.html">Galería</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-      </ul>
-    </nav>
-
-
-
-
-  </header>
+  <div id="header-container"></div>
 
   <main>
 
@@ -147,11 +133,23 @@
 
   </main>
   
-  <footer>
-    <p>© 2025 Naturaleza Argentina</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
+  
+  <script>
+    // Cargar el header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        // Marcar la página actual como activa
+        document.getElementById('nav-services').classList.add('active');
+      });
+    
+    // Cargar el footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
   

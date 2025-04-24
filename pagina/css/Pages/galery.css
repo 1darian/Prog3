@@ -1,24 +1,4 @@
 /* Estilos específicos para la página galery. Mobile-First*/
-
-
-
-
-
-
-/* Media queries para otras pantallas */
-/* @media (max-width: 768px) {
-    .contact-form {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .contact-form {
-        width: 100%;
-    }
-    
-} */
-
 .galeria {
     display: flex;
     flex-wrap: wrap;
