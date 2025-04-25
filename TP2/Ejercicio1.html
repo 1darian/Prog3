@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Documento HTML</title>
+</head>
+<body>
+
+  <h1 id="tituloPrincipal">Título original</h1>
+
+  <p class="parrafo">Este es el primer párrafo.</p>
+  <p class="parrafo">Este es el segundo párrafo.</p>
+
+  <div id="contenedor">
+    <ul>
+      <li>E1</li>
+      <li>E2</li>
+      <li>E3</li>
+    </ul>
+  </div>
+
+  <script>
+    // Cambiar el texto del título
+    const titulo = document.getElementById("tituloPrincipal");
+    titulo.textContent = "Ejercicio Uno HTMl";
+
+    // Cambiar el color de los párrafos
+    const parrafos = document.getElementsByClassName("parrafo");
+    for (let i = 0; i < parrafos.length; i++) {
+      parrafos[i].style.color = "green";
+    }
+
+    // Agregar texto diferente a cada <li>
+    const elementosLi = document.querySelectorAll("#contenedor ul li");
+    const textosExtra = [" - Este es el 1er elemento", " - Este es el 2do elemento", " - Este es el 3er elemento"];
+
+    elementosLi.forEach((li, index) => {
+      li.textContent += textosExtra[index];
+    });
+  </script>
+
+</body>
+</html>

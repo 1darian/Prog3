@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    button.eliminar {
+      margin-left: 10px;
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lista de elementos</h1>
+
+  <input type="text" id="textoInput" placeholder="Escribí algo">
+  <button id="btnAgregar">Agregar</button>
+
+  <ul id="lista"></ul>
+
+  <script>
+    const input = document.getElementById('textoInput');
+    const botonAgregar = document.getElementById('btnAgregar');
+    const lista = document.getElementById('lista');
+
+    botonAgregar.addEventListener('click', () => {
+      const valor = input.value.trim();
+
+      if (valor !== "") {
+        const nuevoLi = document.createElement('li');
+        nuevoLi.textContent = valor;
+
+        const btnEliminar = document.createElement('button');
+        btnEliminar.textContent = "Eliminar";
+        btnEliminar.className = "eliminar";
+        btnEliminar.addEventListener('click', () => {
+          lista.removeChild(nuevoLi);
+        });
+
+        nuevoLi.appendChild(btnEliminar);
+        lista.appendChild(nuevoLi);
+
+        input.value = ""; // Limpiar el input después de agregar
+      } else {
+        alert("Por favor ingresá un texto.");
+      }
+    });
+  </script>
+
+</body>
+</html>

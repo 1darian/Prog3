@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3</title>
+  <style>
+    /* Estilo para resaltar el texto: fondo amarillo y negrita */
+    .resaltado {
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    /* Estilo para ocultar el párrafo: no se muestra */
+    .oculto {
+      display: none;
+    }
+
+    /* Espaciado entre los párrafos */
+    .parrafo-container {
+      margin-bottom: 15px;
+    }
+
+    /* Estilo para los botones */
+    button {
+      margin-left: 5px;
+      padding: 3px 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>modificar clases CSS desde Js</h1>
+
+  <!-- Primer párrafo con botones para resaltar y ocultar -->
+  <div class="parrafo-container">
+    <p class="parrafo">Este es el primer párrafo.</p>
+    <button class="btn-resaltar">Resaltar</button>
+    <button class="btn-ocultar">Ocultar</button>
+  </div>
+
+  <!-- Segundo párrafo con botones para resaltar y ocultar -->
+  <div class="parrafo-container">
+    <p class="parrafo">Este es el segundo párrafo.</p>
+    <button class="btn-resaltar">Resaltar</button>
+    <button class="btn-ocultar">Ocultar</button>
+  </div>
+
+  <!-- Tercer párrafo con botones para resaltar y ocultar -->
+  <div class="parrafo-container">
+    <p class="parrafo">Este es el tercer párrafo.</p>
+    <button class="btn-resaltar">Resaltar</button>
+    <button class="btn-ocultar">Ocultar</button>
+  </div>
+
+  <script>
+    // Seleccionamos todos los contenedores de párrafos (cada uno tiene su párrafo y botones)
+    const contenedores = document.querySelectorAll('.parrafo-container');
+
+    // Recorremos cada contenedor
+    contenedores.forEach(contenedor => {
+      // Seleccionamos el párrafo y los botones dentro de cada contenedor
+      const parrafo = contenedor.querySelector('.parrafo');
+      const btnResaltar = contenedor.querySelector('.btn-resaltar');
+      const btnOcultar = contenedor.querySelector('.btn-ocultar');
+
+      // Agregamos un evento para el botón de "Resaltar"
+      btnResaltar.addEventListener('click', () => {
+        // Toggle: si ya está resaltado, lo quita, y si no, lo resalta
+        parrafo.classList.toggle('resaltado');
+      });
+
+      // Agregamos un evento para el botón de "Ocultar"
+      btnOcultar.addEventListener('click', () => {
+        // Toggle: si está visible, lo oculta, y si está oculto, lo muestra
+        parrafo.classList.toggle('oculto');
+      });
+    });
+  </script>
+
+</body>
+</html>
