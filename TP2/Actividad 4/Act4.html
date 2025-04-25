@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+    <link rel="stylesheet" href="Act4.css" />
+</head>
+<body>
+    <div id="contenedor">
+        <ul id="lista">
+            <li>Sacar a pasear al perro</li>
+            <li>Estudiar para el parcial del lunes</li>
+            <li>Poner a lavar ropa</li>
+        </ul>
+        <form id="formulario">
+            <label for="nueva_tarea">Tarea a realizar:</label>
+            <textarea id="nueva_tarea" name="nueva_tarea" required></textarea>
+            <button type="button" id="btn_enviar">Enviar</button>
+        </form>
+
+        <script>
+            const lista = document.getElementById("lista");
+            const boton = document.getElementById("btn_enviar");
+
+            boton.addEventListener("click", () => {
+                const input = document.getElementById("nueva_tarea").value;
+                    document.getElementById("nueva_tarea").value = "";
+                    const nueva_tarea = document.createElement("li");
+                    const texto = document.createTextNode(input);
+                    nueva_tarea.appendChild(texto);
+                    lista.appendChild(nueva_tarea);  
+            })
+        </script>
+        <script>
+            var list = document.querySelector('ul');
+            list.addEventListener('click', function(tarea) {
+            if (tarea.target.tagName === 'LI') {
+                tarea.target.classList.toggle('completado');
+                }
+            })
+        </script>
+    </div>
+    
+</body>
+</html>

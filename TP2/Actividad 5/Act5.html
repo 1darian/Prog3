@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5</title>
+    <link rel="stylesheet" href="Act5.css" />
+</head>
+<body>
+    <main>
+        <form id="formulario" novalidate>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <p id="nombre_error"></p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <p id="email_error"></p>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad">
+            <p id="edad_error"></p>
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+
+        <script>
+            const nombre = document.getElementById("nombre");
+            const email = document.getElementById("email");
+            const edad = document.getElementById("edad");
+            let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i; 
+
+
+            document.getElementById("formulario").addEventListener("submit", function(event) {
+                const nombre_error = document.getElementById("nombre_error");
+                const email_error = document.getElementById("email_error")
+                const edad_error = document.getElementById("edad_error")
+                let valido = 1;
+
+                if (nombre.value === "") {
+                    nombre_error.style.display = "block";
+                    nombre_error.innerText = "Este campo debe completarse";
+                    valido = 0;
+                }
+                else {
+                    nombre_error.style.display = "none";
+                }
+
+                if (email.value === "") {
+                    email_error.style.display = "block";
+                    email_error.innerText = "Este campo debe completarse";
+                    valido = 0;
+                }
+                else if (!(regex.test(String(email.value)))) {
+                    email_error.innerText = "El contenido ingresado no es un email";
+                    valido = 0;
+                }
+                else {
+                    email_error.style.display = "none";
+                }
+
+                if (edad.value === "") {
+                    edad_error.style.display = "block";
+                    edad_error.innerText = "Este campo debe completarse";
+                    valido = 0;
+                }
+                else if (edad.value <= 18) {
+                    edad_error.innerText = "La edad mínima es de 18 años";
+                    valido = 0;
+                }
+                else {
+                    edad_error.style.display = "none";
+                }
+                if (valido === 0) {
+                    event.preventDefault();
+                }
+            }
+        )
+        </script>
+    </main>
+</body>
+</html>
