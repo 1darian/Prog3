@@ -29,16 +29,24 @@ Ruta: /api/v1/turnos
 ## Instalación del proyecto
 
 1. Clonar el repositorio:
+
     git init
-    git clone https://github.com/santozzi/practico3progra3.git
+
+    git clone https://github.com/1darian/Prog3.git
     
 2. Ejecutar servidor
+
     abrir con Visual Studio Code y en la consola escribir
+
     -npm install
+
     y despues
+
     -npm run dev
 
+
 3. Abrir el navegador en el puerto 3001
+
     http://localhost:3001/
 
 
