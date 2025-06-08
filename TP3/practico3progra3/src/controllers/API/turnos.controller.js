@@ -61,44 +61,56 @@ class TurnosController {
     }
   }
 
-  // Métodos adicionales para funcionalidades futuras
-  async list(req, res) {
+  async cancelarTurnoGet(req, res) {
     try {
-      const turnos = await turnosModel.list()
-      res.status(200).json(turnos)
+      const { idTurno } = req.params
+
+      if (!idTurno || isNaN(idTurno)) {
+        return res.status(400).send("ID de turno inválido");
+      }
+
+      await turnosModel.cancelarTurno(idTurno);
+
+      // Redirige a la lista de turnos después de cancelar
+      res.redirect("/api/v1/turnos");
     } catch (error) {
-      res.status(500).json({
-        message: "Error al listar turnos",
-        error: error.message,
-      })
+      let msg = "Error al cancelar el turno";
+      if (error.message === "Turno no encontrado" || error.message === "El turno ya está cancelado") {
+        msg = error.message;
+      }
+      res.status(400).send(msg);
     }
   }
 
-  async create(req, res) {
+  // Métodos adicionales para funcionalidades futuras
+async list(req, res) {
+      try {
+          const turnos = await turnosModel.list(); // Usa el método correcto del modelo
+          res.render("turnos/list", { turnos }); // Renderiza la vista EJS y pasa los turnos
+      } catch (error) {
+          res.status(500).send("Error al obtener los turnos");
+      }
+  }
+
+   async create(req, res) {
     try {
-      const { idPaciente, fecha, hora, especialidad, medico } = req.body
+      let { idPaciente, fecha, hora, especialidad, medico } = req.body
 
       if (!idPaciente || !fecha || !hora || !especialidad || !medico) {
-        return res.status(400).json({
-          message: "Faltan datos obligatorios",
-        })
+        // Si viene de un formulario, renderiza el form con error
+        return res.render("turnos/form", { error: "Faltan datos obligatorios" });
       }
+
+      idPaciente = Number(idPaciente); // <-- Asegura que sea número
 
       const nuevoTurno = new Turno(idPaciente, fecha, hora, especialidad, medico)
       const turnoCreado = await turnosModel.create(nuevoTurno)
 
-      res.status(201).json({
-        message: "Turno creado exitosamente",
-        turno: turnoCreado,
-      })
+      return res.redirect("/api/v1/turnos");
     } catch (error) {
-      res.status(500).json({
-        message: "Error al crear turno",
-        error: error.message,
-      })
+      return res.render("turnos/form", { error: "Error al crear turno" });
     }
   }
-
   async getTurnoById(req, res) {
     try {
       const { idTurno } = req.params

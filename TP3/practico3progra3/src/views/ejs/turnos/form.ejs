@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Nuevo Turno</title>
+    <style>
+        form { max-width: 400px; margin: 40px auto; }
+        label { display: block; margin-top: 15px; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; background: #2f7c47; color: #fff; border: none; padding: 12px; border-radius: 6px; width: 100%; }
+        button:hover { background: #215732; }
+    </style>
+</head>
+<body>
+    <h1>Registrar Nuevo Turno</h1>
+    <form action="/api/v1/turnos" method="POST">
+        <label for="idPaciente">ID Paciente</label>
+        <input type="number" name="idPaciente" id="idPaciente" required>
+
+        <label for="fecha">Fecha</label>
+        <input type="date" name="fecha" id="fecha" required>
+
+        <label for="hora">Hora</label>
+        <input type="time" name="hora" id="hora" required>
+
+        <label for="especialidad">Especialidad</label>
+        <input type="text" name="especialidad" id="especialidad" required>
+
+        <label for="medico">Médico</label>
+        <input type="text" name="medico" id="medico" required>
+
+        <button type="submit">Registrar Turno</button>
+    </form>
+</body>
+</html>

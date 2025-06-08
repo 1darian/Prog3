@@ -12,6 +12,22 @@ class PacientesModel {
         "email@gmail.com",
         "12345",
         1
+      ),
+      new Persona(
+        "123124387",
+        "Darian",
+        "Savenia",
+        "darian@gmail.com",
+        "12355",
+        1
+      ),
+      new Persona(
+        "123129999",
+        "Simon",
+        "Bucci",
+        "simon@gmail.com",
+        "12327",
+        1
       )
     );
     this.id = 2;

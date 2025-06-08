@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Turnos</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        th { background: #eee; }
+        .cancelado { color: red; }
+        .activo { color: green; }
+        a.eliminar {
+            color: #fff;
+            background: #c0392b;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        a.eliminar:hover {
+            background: #922b21;
+        }
+    </style>
+</head>
+<body>
+    <h1>Turnos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Paciente</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Especialidad</th>
+                <th>Médico</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% turnos.forEach(turno => { %>
+                <tr>
+                    <td><%= turno.id %></td>
+                    <td><%= turno.idPaciente %></td>
+                    <td><%= turno.fecha %></td>
+                    <td><%= turno.hora %></td>
+                    <td><%= turno.especialidad %></td>
+                    <td><%= turno.medico %></td>
+                    <td class="<%= turno.estado %>"><%= turno.estado %></td>
+                    <td>
+                        <% if(turno.estado === "activo") { %>
+                            <a class="eliminar" href="/api/v1/turnos/cancelar/<%= turno.id %>" onclick="return confirm('¿Seguro que desea cancelar este turno?');">Eliminar</a>
+                        <% } else { %>
+                            <span>Ya cancelado</span>
+                        <% } %>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

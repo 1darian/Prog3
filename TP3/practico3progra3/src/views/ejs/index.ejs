@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title><%= title %></title>
+    <title>Gestión de Turnos</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 500px; margin: 50px auto; text-align: center; }
+        button, a.button {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            padding: 15px;
+            font-size: 1.1em;
+            background: #2f7c47;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover, a.button:hover { background: #215732; }
+        h1 { margin-bottom: 30px; }
+    </style>
 </head>
 <body>
-    <h1><%= message %></h1>
-    <h2>Estoy en EJS</h2>
-    <p>Bienvenido a nuestra aplicación</p>
-
-    <% if (showFeatures) { %>
-        <h2>Características principales:</h2>
-        <ul>
-            <% features.forEach(function(feature) { %>
-                <li><%= feature %></li>
-            <% }); %>
-        </ul>
-    <% } else { %>
-        <p>No hay características disponibles.</p>
-    <% } %>
-
-    <%# Esto es un comentario (no se renderiza en el HTML) %>
-    
-    <footer>
-        <p>© <%= new Date().getFullYear() %> Mi Aplicación</p>
-    </footer>
+    <div class="container">
+        <h1>Gestión de Turnos</h1>
+        <a class="button" href="/api/v1/turnos">Visualizar turnos disponibles o reservados</a>
+        <a class="button" href="/api/v1/turnos/nuevo">Registrar nuevo turno para paciente</a>
+        <a class="button" href="/api/v1/pacientes/mostrar">Mostrar pacientes y dar de baja</a>
+    </div>
 </body>
 </html>

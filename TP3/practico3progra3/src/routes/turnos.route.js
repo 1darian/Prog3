@@ -1,16 +1,27 @@
 const { Router } = require("express")
 const turnosController = require("../controllers/API/turnos.controller.js")
-const { verifyTokenMiddleware } = require("../middlewares/verifyToken.middleware.js")
 
 const rutaTurnos = Router()
 
-// Rutas obligatorias según requerimientos
-rutaTurnos.get("/:idPaciente", verifyTokenMiddleware, turnosController.getTurnosByPaciente)
-rutaTurnos.delete("/:idTurno", verifyTokenMiddleware, turnosController.cancelarTurno)
-
 // Rutas adicionales para funcionalidades futuras
-rutaTurnos.get("/", verifyTokenMiddleware, turnosController.list)
-rutaTurnos.post("/", verifyTokenMiddleware, turnosController.create)
-rutaTurnos.get("/detalle/:idTurno", verifyTokenMiddleware, turnosController.getTurnoById)
+rutaTurnos.get("/", turnosController.list)
+rutaTurnos.post("/", turnosController.create)
+rutaTurnos.get("/detalle/:idTurno", turnosController.getTurnoById)
+rutaTurnos.get("/nuevo", (req, res) => {
+    res.render("turnos/form");
+})
+
+rutaTurnos.get("/cancelar/:idTurno", async (req, res) => {
+    // Llama al método cancelarTurno del controlador, pero desde GET
+    try {
+        await require("../controllers/API/turnos.controller.js").cancelarTurnoGet(req, res);
+    } catch (error) {
+        res.status(500).send("Error al cancelar el turno");
+    }
+});
+
+// Rutas obligatorias según requerimientos (van al final)
+rutaTurnos.get("/:idPaciente", turnosController.getTurnosByPaciente)
+rutaTurnos.delete("/:idTurno", turnosController.cancelarTurno)
 
 module.exports = rutaTurnos
