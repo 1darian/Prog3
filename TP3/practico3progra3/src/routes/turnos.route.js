@@ -1,14 +1,15 @@
 const { Router } = require("express")
 const turnosController = require("../controllers/API/turnos.controller.js")
-
+const {validate} = require("../middlewares/validate.js")
+const turnoSchema = require("../schemas/turnos.schema.js")
 const rutaTurnos = Router()
 
 // Rutas adicionales para funcionalidades futuras
 rutaTurnos.get("/", turnosController.list)
-rutaTurnos.post("/", turnosController.create)
+rutaTurnos.post("/", validate(turnoSchema.create), turnosController.create)
 rutaTurnos.get("/detalle/:idTurno", turnosController.getTurnoById)
 rutaTurnos.get("/nuevo", (req, res) => {
-    res.render("turnos/form");
+    res.render("turnos/form", { error: undefined});
 })
 
 rutaTurnos.get("/cancelar/:idTurno", async (req, res) => {

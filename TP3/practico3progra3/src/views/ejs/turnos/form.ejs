@@ -31,5 +31,11 @@
 
         <button type="submit">Registrar Turno</button>
     </form>
+    <% if (error) { %>
+        <div style="color: red; margin: 20px 0; border: 1px solid red; padding: 10px; border-radius: 5px;">
+            <%= error %>
+        </div>
+    <% } %>
+    
 </body>
 </html>
