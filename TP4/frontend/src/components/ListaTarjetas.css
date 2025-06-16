@@ -1,0 +1,40 @@
+.lista-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lista-container h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.lista-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.no-personas {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.no-personas h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-personas p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .lista-tarjetas {
+    grid-template-columns: 1fr;
+  }
+}
